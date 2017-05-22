@@ -1,0 +1,54 @@
+﻿@model IEnumerable<HBSISLibraryWeb.ViewModels.BookListViewModel>
+
+@{
+    ViewBag.Title = "Livros";
+}
+
+<h2>Controle de exemplares</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().PublisherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().ISBN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Pages)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublisherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISBN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pages)
+        </td>   
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.BookID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.BookID }) |
+            @Html.ActionLink("Excluir", "Delete", new { id = item.BookID })
+        </td>
+    </tr>
+}
+
+</table>

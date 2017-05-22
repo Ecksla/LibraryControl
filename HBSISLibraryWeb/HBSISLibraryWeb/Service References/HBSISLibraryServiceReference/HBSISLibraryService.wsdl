@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HBSISLibraryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62404/HBSISLibraryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62404/HBSISLibraryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62404/HBSISLibraryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HBSISLibraryWCF.ServiceEntities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHBSISLibraryService_FindAllBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllBooks" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_FindAllBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_FindBookById_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindBookById" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_FindBookById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindBookByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_InsertBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBook" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_InsertBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_UpdateBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBook" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_UpdateBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_DeleteBookById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookById" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_DeleteBookById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_FindAllPublishers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllPublishers" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_FindAllPublishers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllPublishersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_FindAllAuthors_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllAuthors" />
+  </wsdl:message>
+  <wsdl:message name="IHBSISLibraryService_FindAllAuthors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllAuthorsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHBSISLibraryService">
+    <wsdl:operation name="FindAllBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHBSISLibraryService/FindAllBooks" message="tns:IHBSISLibraryService_FindAllBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHBSISLibraryService/FindAllBooksResponse" message="tns:IHBSISLibraryService_FindAllBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindBookById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHBSISLibraryService/FindBookById" message="tns:IHBSISLibraryService_FindBookById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHBSISLibraryService/FindBookByIdResponse" message="tns:IHBSISLibraryService_FindBookById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHBSISLibraryService/InsertBook" message="tns:IHBSISLibraryService_InsertBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHBSISLibraryService/InsertBookResponse" message="tns:IHBSISLibraryService_InsertBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHBSISLibraryService/UpdateBook" message="tns:IHBSISLibraryService_UpdateBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHBSISLibraryService/UpdateBookResponse" message="tns:IHBSISLibraryService_UpdateBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBookById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHBSISLibraryService/DeleteBookById" message="tns:IHBSISLibraryService_DeleteBookById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHBSISLibraryService/DeleteBookByIdResponse" message="tns:IHBSISLibraryService_DeleteBookById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllPublishers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHBSISLibraryService/FindAllPublishers" message="tns:IHBSISLibraryService_FindAllPublishers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHBSISLibraryService/FindAllPublishersResponse" message="tns:IHBSISLibraryService_FindAllPublishers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllAuthors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHBSISLibraryService/FindAllAuthors" message="tns:IHBSISLibraryService_FindAllAuthors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHBSISLibraryService/FindAllAuthorsResponse" message="tns:IHBSISLibraryService_FindAllAuthors_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IHBSISLibraryService" type="tns:IHBSISLibraryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindAllBooks">
+      <soap:operation soapAction="http://tempuri.org/IHBSISLibraryService/FindAllBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindBookById">
+      <soap:operation soapAction="http://tempuri.org/IHBSISLibraryService/FindBookById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBook">
+      <soap:operation soapAction="http://tempuri.org/IHBSISLibraryService/InsertBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <soap:operation soapAction="http://tempuri.org/IHBSISLibraryService/UpdateBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBookById">
+      <soap:operation soapAction="http://tempuri.org/IHBSISLibraryService/DeleteBookById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllPublishers">
+      <soap:operation soapAction="http://tempuri.org/IHBSISLibraryService/FindAllPublishers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllAuthors">
+      <soap:operation soapAction="http://tempuri.org/IHBSISLibraryService/FindAllAuthors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HBSISLibraryService">
+    <wsdl:port name="BasicHttpBinding_IHBSISLibraryService" binding="tns:BasicHttpBinding_IHBSISLibraryService">
+      <soap:address location="http://localhost:62404/HBSISLibraryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

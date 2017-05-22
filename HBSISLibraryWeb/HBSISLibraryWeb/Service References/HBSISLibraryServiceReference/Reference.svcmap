@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2e424a9b-ba4a-4e75-9751-94b1dfc0f573" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62404/HBSISLibraryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HBSISLibraryService.xsd" MetadataType="Schema" ID="0fd4d0a6-5085-4499-9e92-2babbba6d664" SourceId="1" SourceUrl="http://localhost:62404/HBSISLibraryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HBSISLibraryService1.xsd" MetadataType="Schema" ID="9045a0e8-f0d0-4c95-8e78-6734cb116fef" SourceId="1" SourceUrl="http://localhost:62404/HBSISLibraryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="HBSISLibraryService.wsdl" MetadataType="Wsdl" ID="0b9c0461-c635-4f2a-a489-a118d38c94eb" SourceId="1" SourceUrl="http://localhost:62404/HBSISLibraryService.svc?wsdl" />
+    <MetadataFile FileName="HBSISLibraryService2.xsd" MetadataType="Schema" ID="398dbf89-e013-4817-8458-3febbcf57884" SourceId="1" SourceUrl="http://localhost:62404/HBSISLibraryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HBSISLibraryService.disco" MetadataType="Disco" ID="9acdb0d2-500d-4462-a750-03cca75862f3" SourceId="1" SourceUrl="http://localhost:62404/HBSISLibraryService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

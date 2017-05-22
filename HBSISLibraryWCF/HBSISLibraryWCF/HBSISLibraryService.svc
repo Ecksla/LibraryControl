@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="HBSISLibraryWCF.HBSISLibraryService" CodeBehind="HBSISLibraryService.svc.cs" %>

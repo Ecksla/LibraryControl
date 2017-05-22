@@ -1,0 +1,69 @@
+﻿@model HBSISLibraryWeb.ViewModels.BookDetailsViewModel
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Book</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pages)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pages)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PublisherName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PublisherName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorsList)
+        </dt>
+        <dd>
+            <ul style="list-style-type:none; padding-left: 0px;">
+                @foreach (var author in Model.AuthorsList)
+                {
+                    <li>
+                        @string.Format("{0} {1}", author.FirstName, author.LastName)
+                    </li>
+                }
+            </ul>
+        </dd>
+        
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.BookID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>
